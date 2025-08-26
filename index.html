@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sevdiğime Özel</title>
+    <style>
+        /* Genel stil */
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 50px;
+            animation: renkDegistir 2s infinite alternate;
+        }
+
+        /* Kalp animasyonu */
+        .kalp {
+            position: absolute;
+            font-size: 40px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: yukariCik 3s infinite;
+        }
+
+        @keyframes yukariCik {
+            0% { transform: translateX(-50%) translateY(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(-50%) translateY(-300px); opacity: 0; }
+        }
+
+        /* Başlık renk değişimi */
+        @keyframes renkDegistir {
+            0% { color: red; }
+            50% { color: orange; }
+            100% { color: purple; }
+        }
+
+        /* Fotoğraf stilleri */
+        .foto {
+            width: 200px;
+            margin: 10px;
+            border: 3px solid white;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .foto:hover {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 0 20px rgba(255,0,0,0.7);
+        }
+
+        .sol { float: left; margin-left: 20px; }
+        .sag { float: right; margin-right: 20px; }
+        .orta { display: block; margin: 20px auto; }
+
+        /* Temizleme */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kalpler -->
+    <div class="kalp">💖</div>
+    <div class="kalp">💖</div>
+    <div class="kalp">💖</div>
+    <div class="kalp">💖</div>
+
+    <!-- Başlık ve mesaj -->
+    <h1>💓 Seni Çok Seviyorum 💓</h1>
+    <p>
+        Salak saçma konuşup moralini bozduğum için özür dilerim lütfen sinirlenme  
+        balım askim seni sinirlendirmek değildi amacım keşke yanında olsaydın da düğünde  
+        olduğu gibi öpebilseydim seni belki tüm herşeyin düzelirdi Muahh 💞
+    </p>
+
+    <!-- Fotoğraflar -->
+    <div class="clearfix">
+        <img src="nazim1.jpg" width="200" class="sol foto" alt="herşeyim">
+        <img src="nazim2.jpg" width="200" class="sag foto" alt="yavrum">
+        <img src="nazim3.jpg" width="200" class="orta foto" alt="güzelim">
+        <img src="nazim4.jpg" width="200" class="sol foto" alt="bebeğim">
+        <img src="nazim5.jpg" width="200" class="sag foto" alt="aşkım">
+        <img src="nazim6.jpg" width="200" class="orta foto" alt="balım">
+    </div>
+
+</body>
+</html>
